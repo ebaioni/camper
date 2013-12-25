@@ -16,7 +16,8 @@
             "ico",
             "css",
             "js",
-            "svg"
+            "svg",
+            "woff"
         ],
         "expire":"10d",
         "s3-bucket":"camper-website"
