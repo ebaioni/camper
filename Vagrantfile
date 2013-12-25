@@ -25,6 +25,7 @@ Vagrant.configure("2") do |config|
 
     chef.run_list = ['recipe[apt]', 'recipe[nginx]', 'recipe[s3cmd]', 'recipe[camper]']
 
+    chef.json = JSON.load(File.open('json/dev.json').read)
 
   end
 
