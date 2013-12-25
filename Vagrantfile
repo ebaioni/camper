@@ -20,10 +20,10 @@ Vagrant.configure("2") do |config|
     chef.cookbooks_path = "./cookbooks"
     chef.add_recipe "apt"
     chef.add_recipe "nginx"
-    chef.add_recipe "s3cmd"
+    chef.add_recipe "awscli"
     chef.add_recipe "camper"
 
-    chef.run_list = ['recipe[apt]', 'recipe[nginx]', 'recipe[s3cmd]', 'recipe[camper]']
+    chef.run_list = ['recipe[apt]', 'recipe[nginx]', 'recipe[awscli]', 'recipe[camper]']
 
     chef.json = JSON.load(File.open('json/dev.json').read)
 
